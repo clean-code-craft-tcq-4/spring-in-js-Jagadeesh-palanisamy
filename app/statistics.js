@@ -12,7 +12,7 @@ let result={min:Math.min(...numbers),max:Math.max(...numbers),average:average}
 console.log(result)
 return result;
 }else{
- let result={min:'NAN',max:'NAN',average:'NAN'}
+ let result={min:NaN,max:NaN,average:NaN}
 console.log(result)
 return result; 
 }
