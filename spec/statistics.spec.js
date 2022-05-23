@@ -49,7 +49,12 @@ describe("StatisticsTest",function(){
              let LEDAlert = function(){
                 ledGlows = true;
                  };
+    let StatsAlerter=function(maxThreshold, alerters){
+                    // checkAndAlert:function  (numbers){
 
+                    // }
+                 }
+                 
 
          const emailAlert=new EmailAlert();
          const ledAlert=new LEDAlert();
