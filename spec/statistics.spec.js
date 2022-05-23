@@ -18,6 +18,12 @@ describe("StatisticsTest",function(){
     it("reportsNaNForEmptyInput",function(){
         const numbers=[];
         const stats=getStatistics(numbers);
+         const epsilon=0.001;
+
+        expect(Math.abs((stats.min-1.5))).toBeLessThan(epsilon);
+        expect(Math.abs((stats.max- 8.9))).toBeLessThan(epsilon);
+        expect(Math.abs((stats.average- 4.525))).toBeLessThan(epsilon);
+        
         // All fields of computedStats (average, max, min) must be
         // NAN (not-a-number)
         // Design the expect statement here.
