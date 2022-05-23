@@ -8,7 +8,7 @@ let average = numbers.reduce(function (previousValue, currentValue) {
     return previousValue + currentValue;
 });
 
-let result={min:Math.min(...numbers),max:Math.max(...numbers),average:average}
+let result={min:Math.min(...numbers),max:Math.max(...numbers),average:average/numbers.length-1}
 console.log(result)
 return result;
 }else{
