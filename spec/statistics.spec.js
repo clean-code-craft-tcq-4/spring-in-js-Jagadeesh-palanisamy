@@ -16,9 +16,15 @@ describe("StatisticsTest",function(){
 
     
     it("reportsNaNForEmptyInput",function(){
-        const numbers=[];
+//         const numbers=[];
+//         const stats=getStatistics(numbers);
+         const r1 = 1.5;
+        const r2 = 8.9;
+        const r3 = 3.2;
+        const r4= 4.5;
+        const numbers=[r1,r2,r3,r4];
         const stats=getStatistics(numbers);
-         const epsilon=0.001;
+        const epsilon=0.001;
 
         expect(Math.abs((stats.min-1.5))).toBeLessThan(epsilon);
         expect(Math.abs((stats.max- 8.9))).toBeLessThan(epsilon);
