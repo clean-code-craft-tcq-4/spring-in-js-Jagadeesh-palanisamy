@@ -42,13 +42,14 @@ describe("StatisticsTest",function(){
         
     })
     it("raises alerts when max is greater than threshold",function(){
-         let EmailAlert = function(){
-            email = 1;
+        let EmailAlert = function(){
+            emailSent = true;
              };
 
              let LEDAlert = function(){
-                led = 1;
+                ledGlows = true;
                  };
+
 
          const emailAlert=new EmailAlert();
          const ledAlert=new LEDAlert();
@@ -58,7 +59,16 @@ describe("StatisticsTest",function(){
 
          const statsAlerter=new StatsAlerter(maxThreshold, alerters);
        //  statsAlerter.checkAndAlert([99.8, 34.2, 4.5, 6.7]);
-     
+     if(emailAlert.emailSent){
+         return true;
+     }else{
+         return false
+     }
+        if(ledAlert.ledGlows){
+        return true;
+     }else{
+         return false
+     }
 //          expect(emailAlert.emailSent).tobe(true);
 //          expect(ledAlert.ledGlows).tobe(true);
 
