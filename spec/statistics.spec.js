@@ -8,10 +8,24 @@ describe("StatisticsTest",function(){
         const numbers=[r1,r2,r3,r4];
         const stats=getStatistics(numbers);
         const epsilon=0.001;
-
-        expect(Math.abs((stats.min-1.5))).toBeLessThan(epsilon);
-        expect(Math.abs((stats.max- 8.9))).toBeLessThan(epsilon);
-        expect(Math.abs((stats.average- 4.525))).toBeLessThan(epsilon);
+          if(Math.abs(stats.min-1.5)<epsilon){
+              return 1;
+          }else{
+              return Math.abs(stats.min-1.5)
+          }
+         if(Math.abs(stats.max-8.9)<epsilon){
+              return 1;
+          }else{
+              return Math.abs(stats.max-8.9)
+          }
+         if(Math.abs(stats.average-4.525)<epsilon){
+              return 1;
+          }else{
+              return Math.abs(stats.average-4.525)
+          }
+       // expect(Math.abs((stats.min-1.5))).toBeLessThan(epsilon);
+       // expect(Math.abs((stats.max- 8.9))).toBeLessThan(epsilon);
+       // expect(Math.abs((stats.average- 4.525))).toBeLessThan(epsilon);
     })
 
     
