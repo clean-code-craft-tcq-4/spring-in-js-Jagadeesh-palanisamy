@@ -1,5 +1,11 @@
 module.exports=function getStatistics(numbers){
-    
-    //implement the computation of statistics here
+    let totalVaue=0;
+    totalVaue=totalVaue+numbers;
+    if(totalVaue>180){
+        return 1;
+    }else{
+        return 0;
+    }
+
 }
 
