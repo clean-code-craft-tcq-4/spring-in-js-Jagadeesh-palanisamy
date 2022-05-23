@@ -1,6 +1,6 @@
 module.exports=function getStatistics(numbers){
  
-function getStatistics(numbers){
+
  
 let total=0;
 if(numbers.length>0){
@@ -16,6 +16,6 @@ return result;
 console.log(result)
 return result; 
 }
-}
+
 }
 
