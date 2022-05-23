@@ -1,11 +1,11 @@
 module.exports=function getStatistics(numbers){
-    let totalVaue=0;
-    totalVaue=totalVaue+numbers;
-    if(totalVaue>180){
-        return 1;
-    }else{
-        return 0;
-    }
+ 
+let total=0;
+let average = numbers.reduce(function (previousValue, currentValue) {
+    return previousValue + currentValue;
+});
 
+let result={min:Math.min(...numbers),max:Math.max(...numbers),average:average}
+return result;
 }
 
